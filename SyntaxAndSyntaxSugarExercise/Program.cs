@@ -1,31 +1,30 @@
-﻿namespace SyntaxAndSyntaxSugarExercise
+﻿using System;
+
+namespace SyntaxAndSyntaxSugarExercise
 {
     public class Program
     {
-        private static bool response; // Declaring a private static bool variable
+        private static bool response; // I'm Keeping the original variable as directed. 
 
         static void Main(string[] args)
         {
-            // Step 1: Delcare and initialize my variable
-            int answer = 4;
+            var answer = 4; // Inferred typing with var "step 1 in instructions". 
 
-            // Step 2: Determine if the answer is less than 9
-            response = answer < 9; // This sets the resonse to True or False
+            response = answer < 9; // I'm setting response type to True or False.
 
-            // Step 3: Use if-else to create the output message to user
-            string message; // Declare the message variable
+            // Using ternary operator "Step 3 in assignment"
+            var message = response
+                ? $"{answer} is less than nine"
+                : $"{answer} is greater than or equal to nine"; // I'm using string interpolation " Step 2 in instructions". 
 
-            if (response)
-            {
-                message = $"{answer} is less than nine"; // If response is only true
-            }
-            else
-            {
-                message = $"{answer} is greater than or equal to nine"; // If the response is false 
-            }
-
-            // Step 4: Output the message to the console
-            Console.WriteLine(message); // Display the message 
+            Console.WriteLine(message); //  Output the message.
         }
     }
 }
+
+
+// So my task was to Refactor the code to use 3 things "Inferred Typing, String Interpolation, and Tenary Operator, each step is noted in the source. 
+// Step 1. Inferred Typing - was to "Replace explicit types with (VAR).
+// Step 2. String Interpolation - I was instructed to Refactor the concatenation to use string interpolation.
+// Step 3. Ternary Operator -  I needed to replace the "if-else" statement with a ternary operator. 
+// Step 4. Did I do this correctly! Y/N :)
